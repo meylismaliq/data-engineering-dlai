@@ -1,0 +1,76 @@
+[0m00:02:30.403516 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70cce3636120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70cce44c42f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70cce3636150>]}
+
+
+============================== 00:02:30.406654 | 6ce68c87-a3d0-4ecd-adbd-85f412c509e5 ==============================
+[0m00:02:30.406654 [info ] [MainThread]: Running with dbt=1.8.1
+[0m00:02:30.410489 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': '/home/coder/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt init classicmodels_modeling', 'send_anonymous_usage_stats': 'True'}
+[0m00:02:30.424049 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object, got 'PosixPath'.. Dictionary: {'dir': PosixPath('/home/coder/.dbt')}
+[0m00:02:30.424433 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m00:02:30.430313 [debug] [MainThread]: Starter project path: /home/coder/miniconda/lib/python3.12/site-packages/dbt/include/starter_project
+[0m00:02:30.750485 [info ] [MainThread]: 
+Your new dbt project "classicmodels_modeling" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m00:02:30.751009 [info ] [MainThread]: Setting up your profile.
+[0m00:02:41.276736 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m00:02:41.281330 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m00:02:51.145902 [error] [MainThread]: Encountered an error:
+
+[0m00:02:51.149750 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/coder/miniconda/lib/python3.12/site-packages/dbt/cli/requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/coder/miniconda/lib/python3.12/site-packages/dbt/cli/requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/coder/miniconda/lib/python3.12/site-packages/dbt/cli/main.py", line 469, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/home/coder/miniconda/lib/python3.12/site-packages/dbt/task/init.py", line 347, in run
+    self.setup_profile(profile_name)
+  File "/home/coder/miniconda/lib/python3.12/site-packages/dbt/task/init.py", line 263, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/home/coder/miniconda/lib/python3.12/site-packages/dbt/task/init.py", line 180, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/home/coder/miniconda/lib/python3.12/site-packages/dbt/task/init.py", line 164, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/coder/miniconda/lib/python3.12/site-packages/dbt/task/init.py", line 130, in generate_target_from_input
+    target[key] = click.prompt(
+                  ^^^^^^^^^^^^^
+  File "/home/coder/miniconda/lib/python3.12/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/home/coder/miniconda/lib/python3.12/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m00:02:51.151672 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 20.809713, "process_user_time": 1.426649, "process_kernel_time": 0.084144, "process_mem_max_rss": "94960", "process_in_blocks": "40927", "process_out_blocks": "160", "command_success": false}
+[0m00:02:51.156894 [debug] [MainThread]: Command `dbt init` failed at 00:02:51.156760 after 20.82 seconds
+[0m00:02:51.160499 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70cce399c980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70cce2b354c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70cce34a5d00>]}
+[0m00:02:51.164855 [debug] [MainThread]: Flushing usage events
+[0m00:17:57.349178 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b7a6f2164e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b7a6f3652b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b7a6ff45940>]}
+
+
+============================== 00:17:57.352310 | 5ea55a07-2874-48ba-badb-588b188b2a50 ==============================
+[0m00:17:57.352310 [info ] [MainThread]: Running with dbt=1.8.1
+[0m00:17:57.355899 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/coder/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt init classicmodels_modeling', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m00:17:57.369315 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object, got 'PosixPath'.. Dictionary: {'dir': PosixPath('/home/coder/.dbt')}
+[0m00:17:57.369710 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m00:17:57.376373 [info ] [MainThread]: A project called classicmodels_modeling already exists here.
+[0m00:17:57.379239 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.08079115, "process_user_time": 1.295793, "process_kernel_time": 0.135978, "process_mem_max_rss": "85840", "process_in_blocks": "36826", "process_out_blocks": "48"}
+[0m00:17:57.382448 [debug] [MainThread]: Command `dbt init` succeeded at 00:17:57.382335 after 0.08 seconds
+[0m00:17:57.385599 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b7a726ccdd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b7a6ef9e2d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b7a6f1549e0>]}
+[0m00:17:57.389286 [debug] [MainThread]: Flushing usage events
