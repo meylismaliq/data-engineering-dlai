@@ -2,7 +2,7 @@
 
 > Designing, building, and managing robust data pipelines. Covers AWS, Airflow, Spark, dbt, and modern Data Lakehouse architectures.
 
-![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
+![Status](https://img.shields.io/badge/Status-Complete-success)
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazon-aws&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![Airflow](https://img.shields.io/badge/Apache%20Airflow-017CEE?style=flat&logo=Apache%20Airflow&logoColor=white)
